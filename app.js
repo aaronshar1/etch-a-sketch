@@ -44,7 +44,9 @@ function adjustGridSize(squares, size){
 function addHover(){
     let cells = document.querySelectorAll(".cell");
     cells.forEach(cell => {cell.addEventListener('mouseover', (e) => {
-        e.target.style.backgroundColor = "blue";
+        if (e.buttons === 1){
+            e.target.style.backgroundColor = "rgb(188, 171, 174)";
+        }
     })});    
 }
 
